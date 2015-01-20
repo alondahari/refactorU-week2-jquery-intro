@@ -8,4 +8,8 @@ $(document).on('ready', function() {
   $('#add-list').on('click', function(){
     $('body').append('<ul><li>1</li><li>2</li><li>3</li></ul>');
   });
+
+  $('p').on('mouseover', function(e){
+    $(e.target).css('color', 'pink');
+  });
 });
