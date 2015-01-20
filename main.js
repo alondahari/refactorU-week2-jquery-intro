@@ -18,7 +18,11 @@ $(document).on('ready', function() {
     }
   });
 
-  $('h2').text(function (i,str) {
-    return str + '!'
+  $('.heading').text(function (i,str) {
+    return str + '!';
+  });
+
+  $('a').on('click', function(e){
+    return  confirm('Are you sure you want to leave this page?');
   });
 });
