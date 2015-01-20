@@ -23,6 +23,10 @@ $(document).on('ready', function() {
   });
 
   $('a').on('click', function(e){
-    return  confirm('Are you sure you want to leave this page?');
+    var navigate = confirm('Are you sure you want to leave this page?');
+    if (!navigate) {
+      $(this).remove();
+      return false;
+    }
   });
 });
