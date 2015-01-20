@@ -16,6 +16,9 @@ $(document).on('ready', function() {
     'mouseleave': function () {
       $(this).children().andSelf().css('color', 'black');
     }
+  });
 
+  $('h2').text(function (i,str) {
+    return str + '!'
   });
 });
