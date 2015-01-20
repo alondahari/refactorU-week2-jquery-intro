@@ -9,7 +9,13 @@ $(document).on('ready', function() {
     $('body').append('<ul><li>1</li><li>2</li><li>3</li></ul>');
   });
 
-  $('p').on('mouseover', function(e){
-    $(e.target).css('color', 'pink');
+  $('p').on({
+    'mouseover': function(){
+      $(this).children().andSelf().css('color', 'pink');
+    },
+    'mouseleave': function () {
+      $(this).children().andSelf().css('color', 'black');
+    }
+
   });
 });
